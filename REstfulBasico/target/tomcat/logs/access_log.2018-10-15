@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [15/Oct/2018:21:23:56 -0300] "GET /REstfulBasico HTTP/1.1" 302 - http-bio-8085-exec-1 0
+0:0:0:0:0:0:0:1 - - [15/Oct/2018:21:23:56 -0300] "GET /REstfulBasico/ HTTP/1.1" 404 979 http-bio-8085-exec-3 17
+0:0:0:0:0:0:0:1 - - [15/Oct/2018:21:23:57 -0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8085-exec-4 0
+0:0:0:0:0:0:0:1 - - [15/Oct/2018:21:25:11 -0300] "GET /REstfulBasico/rest/clima/Goiana HTTP/1.1" 200 93 http-bio-8085-exec-6 36
+0:0:0:0:0:0:0:1 - - [15/Oct/2018:21:25:21 -0300] "GET /REstfulBasico/rest/clima/chicago/2016-08-27 HTTP/1.1" 200 94 http-bio-8085-exec-8 3

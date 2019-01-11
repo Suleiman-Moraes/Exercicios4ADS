@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;index.html&apos; to &apos;webapps&apos;" description="Move &apos;index.html&apos; to &apos;webapps&apos;" destination="Tomcat v8.0 Server at localhost (2)-config/webapps" element1="Tomcat v8.0 Server at localhost (2)-config/index.html" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1543064578651" updateReferences="true"/>
+</session>

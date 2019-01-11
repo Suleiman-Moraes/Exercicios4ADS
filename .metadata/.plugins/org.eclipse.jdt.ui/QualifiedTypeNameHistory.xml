@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="br.com.senaigo.persistenciasandubas.dao.ClassificacaoMercadoriaDAO"/>
+<fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+<fullyQualifiedTypeName name="br.com.senaigo.persistenciasandubas.model.ClassificacaoMercadoria"/>
+<fullyQualifiedTypeName name="javax.inject.Inject"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="br.com.senaigo.clientesandubas.model.ClassificacaoMercadoria"/>
+<fullyQualifiedTypeName name="br.com.senaigo.persistenciasandubas.repository.ClassificacaoMercadorias"/>
+<fullyQualifiedTypeName name="br.com.senaigo.persistenciasandubas.persistencia.ClassificacaoMercadoriaDAO"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="java.util.regex.Matcher"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="br.com.sandubas.service.ClassificacaoMercadoriaService"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="br.com.sandubas.model.Perfil"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="lombok.Setter"/>
+<fullyQualifiedTypeName name="lombok.Getter"/>
+<fullyQualifiedTypeName name="br.com.sandubas.model.enums.TipoTelefoneEnum"/>
+<fullyQualifiedTypeName name="br.com.sandubas.model.Telefone"/>
+<fullyQualifiedTypeName name="br.com.sandubas.service.TelefoneService"/>
+<fullyQualifiedTypeName name="br.com.sandubas.exception.UsuarioInativoException"/>
+<fullyQualifiedTypeName name="br.com.sandubas.model.Usuario"/>
+<fullyQualifiedTypeName name="br.com.sandubas.model.enums.FuncaoUsuarioEnum"/>
+<fullyQualifiedTypeName name="br.com.sandubas.model.enums.StatusUsuarioEnum"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="br.com.sandubas.exception.NegocioException"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+</qualifiedTypeNameHistroy>

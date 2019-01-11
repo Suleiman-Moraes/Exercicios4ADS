@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [15/Oct/2018:22:28:41 -0300] "GET /RESTfullCRUD/employee/getAllEmployees HTTP/1.1" 404 - http-bio-8088-exec-1 0
+0:0:0:0:0:0:0:1 - - [15/Oct/2018:22:28:57 -0300] "GET /RESTfullCRUD/getAllEmployees HTTP/1.1" 404 - http-bio-8088-exec-3 0

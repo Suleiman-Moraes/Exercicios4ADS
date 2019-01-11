@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui">
+<h:head>
+	<title>#{msg.usuarioCadastro}</title>
+	<h:outputStylesheet library="css" name="sistema.css" />
+</h:head>
+<h:body>
+	<f:metadata>
+		<o:viewParam name="objetoId" value="#{manterUsuarioBean.objeto}"
+			converter="UsuarioConverter"></o:viewParam>
+	</f:metadata>
+	<header>
+	<div style="float: left">
+		<h:graphicImage library="images" name="logo-sandubas.png"
+			height="75" />
+	</div>
+	</header>
+	<br />
+	<h:form id="formulario" style="margin-right: 10px; margin-left:10px;">
+		<ui:param name="controlador" value="#{manterUsuarioBean}" />
+		<p:messages autoUpdate="true" />
+		<p:growl id="grow" />
+		<h4 style="text-align: center">
+			<h:outputText id="title"
+				value="#{empty controlador.objeto.id ? msg.usuarioNovo : msg.usuarioEditar}" />
+		</h4>
+
+		<p:wizard id="wizardID" widgetVar="wizardWV"
+			nextLabel="#{msg.proximo}" backLabel="#{msg.anterior}"
+			style="width: 100%">
+			<p:tab id="dadosPessoaisID" title="#{msg.dadosPessoais}">
+				<p:panelGrid columns="2" id="dados"
+					style="width:100%; margin-top:20px;">
+					<h:panelGroup>
+						<p:focus context="dados" />
+						<p:outputLabel id="lblnome" for="nome" value="#{msg.nome}" />
+					</h:panelGroup>
+
+					<p:inputText id="nome" value="#{controlador.objeto.nome}"
+						maxlength="150" style="width: 420px;" autocomplete="off"
+						required="true" />
+					<p:column>
+						<p:outputLabel id="lblLogin" value="#{msg.login}" for="login" />
+					</p:column>
+					<p:column>
+						<p:inputText id="login" value="#{controlador.objeto.login}"
+							maxlength="150" style="width: 420px;" autocomplete="off"
+							required="true" />
+					</p:column>
+					<p:column>
+						<p:outputLabel id="lblSenha" value="#{msg.senha}" for="senha" />
+					</p:column>
+					<p:column>
+						<p:password id="senha" value="#{controlador.objeto.senha}"
+							maxlength="150" style="width: 420px;" autocomplete="off"
+							required="true" />
+					</p:column>
+					<p:column>
+						<p:outputLabel id="lblConfirmaSenha" value="#{msg.confirmaSenha}"
+							for="confirmaSenha" />
+					</p:column>
+					<p:column>
+						<p:password id="confirmaSenha"
+							value="#{controlador.objeto.confirmacaoSenha}" maxlength="150"
+							style="width: 420px;" autocomplete="off" required="true" />
+					</p:column>
+				</p:panelGrid>
+			</p:tab>
+			<p:tab id="dadosSecundariosID" title="#{msg.dadosSecundarios}">
+				<p:panelGrid columns="2" id="dadosSecundariosGrid"
+					style="width:100%; margin-top:20px;">
+					<p:column>
+						<p:outputLabel id="lblEmail" value="#{msg.email}" for="email" />
+					</p:column>
+					<p:column>
+						<p:inputText id="email" value="#{controlador.objeto.email.email}"
+							maxlength="150" style="width: 420px;" autocomplete="off"
+							required="true" />
+					</p:column>
+					<p:column>
+						<p:outputLabel id="lblStatus" value="#{msg.status}" for="status" />
+					</p:column>
+					<p:column>
+						<p:selectOneRadio id="status"
+							value="#{controlador.objeto.statusUsuarioEnum}" required="true">
+							<f:selectItems value="#{controlador.listaStatusUsuarioEnum}"
+								var="statusV" itemLabel="#{statusV.descricao}"
+								itemValue="#{statusV}" />
+						</p:selectOneRadio>
+					</p:column>
+					<p:column>
+						<p:outputLabel id="lblPerfil" value="#{msg.perfil}" for="perfil" />
+					</p:column>
+					<p:column>
+						<p:selectOneRadio id="perfil"
+							value="#{controlador.objeto.funcaoUsuarioEnum}" required="true">
+							<f:selectItems value="#{controlador.funcoes}" var="x"
+								itemLabel="#{x.descricao}" itemValue="#{x}" />
+						</p:selectOneRadio>
+					</p:column>
+					<p:column>
+						<p:outputLabel id="lblTelefone" value="#{msg.telefone}" for="telefone" />
+					</p:column>
+					<p:column>
+						<p:inputMask id="telefone" value="#{controlador.objeto.telefone.numero}"
+							maxlength="20" style="width: 420px;" autocomplete="off"
+							mask="(99)9?9999-9999"
+							required="true" />
+					</p:column>
+						<p:outputLabel id="lblTipoTelefone" value="#{msg.tipoTelefone}" for="tipoTelefone" />
+					<p:column>
+						<p:selectOneRadio id="tipoTelefone"
+							value="#{controlador.objeto.telefone.tipoTelefoneEnum}"
+							style="margin-left: 5px;"
+							required="true">
+							<f:selectItems value="#{controlador.listaTipoTelefoneEnum}"
+								var="y" itemValue="#{y}"
+								itemLabel="#{y.descricao}" />
+						</p:selectOneRadio>
+					</p:column>
+					<f:facet name="footer">
+						<p:toolbar>
+							<f:facet name="left">
+								<p:commandButton value="#{msg.btnLimpar}" process="@this"
+									icon="fa fa-eraser" update="@form" resetValues="true"
+									action="#{controlador.limpar}" />
+								<p:defaultCommand target="ButaoSalvar" />
+							</f:facet>
+							<f:facet name="right">
+								<p:commandButton id="ButaoSalvar" icon="ui-icon-disk"
+									value="#{msg.btnSalvar}" process="@form" update="@form"
+									action="#{controlador.salvarObjeto}" />
+								<p:defaultCommand target="ButaoSalvar" />
+							</f:facet>
+						</p:toolbar>
+					</f:facet>
+				</p:panelGrid>
+			</p:tab>
+		</p:wizard>
+	</h:form>
+</h:body>
+</html>

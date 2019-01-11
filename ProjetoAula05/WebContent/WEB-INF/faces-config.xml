@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+	version="1.2">
+	<managed-bean>
+		<managed-bean-name>exemplo</managed-bean-name>
+		<managed-bean-class>aulajsf.Exemplo</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>
+		exemploConversor</managed-bean-name>
+		<managed-bean-class>
+		aulajsf.ExemploConversor</managed-bean-class>
+		<managed-bean-scope>
+		session</managed-bean-scope>
+	</managed-bean>
+		<managed-bean>
+		<managed-bean-name>
+		exemploValidador</managed-bean-name>
+		<managed-bean-class>
+		aulajsf.ExemploValidador</managed-bean-class>
+		<managed-bean-scope>
+		session</managed-bean-scope>
+	</managed-bean>
+</faces-config>
